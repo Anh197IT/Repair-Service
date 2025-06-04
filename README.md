@@ -1,2 +1,2 @@
-## Fronted: Angular
+## Front_end: Angular
 ## Backend: MongoDBCompass
