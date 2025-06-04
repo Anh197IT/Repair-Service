@@ -1,0 +1,2 @@
+Fronted: Angular
+Backend: MongoDBCompass
