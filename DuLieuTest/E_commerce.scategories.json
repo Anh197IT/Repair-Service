@@ -1,0 +1,14 @@
+[{
+  "_id": {
+    "$oid": "6823271187c14a18687e96d6"
+  },
+  "nomcategorie": "Tường",
+  "imagecategorie": "https://example.com/electronics.jpg"
+},
+{
+  "_id": {
+    "$oid": "6823271187c14a18687e96d7"
+  },
+  "nomcategorie": "Sàn",
+  "imagecategorie": "https://example.com/furniture.jpg"
+}]

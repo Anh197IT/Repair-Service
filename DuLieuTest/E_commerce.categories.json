@@ -1,0 +1,21 @@
+[{
+  "_id": {
+    "$oid": "6823266687c14a18687e96c3"
+  },
+  "nomcategorie": "Electronics",
+  "imagecategorie": "https://example.com/electronics.jpg"
+},
+{
+  "_id": {
+    "$oid": "6823266687c14a18687e96c4"
+  },
+  "nomcategorie": "Furniture",
+  "imagecategorie": "https://example.com/furniture.jpg"
+},
+{
+  "_id": {
+    "$oid": "6823266687c14a18687e96c5"
+  },
+  "nomcategorie": "Clothing",
+  "imagecategorie": "https://example.com/clothing.jpg"
+}]

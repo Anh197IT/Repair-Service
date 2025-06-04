@@ -1,0 +1,38 @@
+[{
+  "_id": {
+    "$oid": "682324e5a08de8920204c745"
+  },
+  "email": "khainguyenlevan@gmail.com",
+  "password": "$2b$10$lDKMxthIwdUWBOOkO9vzvuv5x3ClVk0y/oB6.R3TFVuHnyecPYchi",
+  "firstname": "Nguyễn",
+  "lastname": "Khải",
+  "role": "admin",
+  "isActive": true,
+  "avatar": "avatar.jpg",
+  "createdAt": {
+    "$date": "2025-05-13T10:54:29.864Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-13T10:54:29.864Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68233e5ca08de8920204c93f"
+  },
+  "email": "admin@gmail.com",
+  "password": "$2b$10$W098vGUOmUxAV5tcf6ddaukVlp6hC3xOdgTG2C3UYidn38cbvnJIe",
+  "firstname": "The",
+  "lastname": "Tàu",
+  "role": "user",
+  "isActive": true,
+  "avatar": "avatar.jpg",
+  "createdAt": {
+    "$date": "2025-05-13T12:43:08.167Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-13T12:43:08.167Z"
+  },
+  "__v": 0
+}]

@@ -1,0 +1,30 @@
+[{
+  "_id": {
+    "$oid": "6823325da08de8920204c82a"
+  },
+  "reference": "Mới",
+  "designation": "Cải tạo tường",
+  "prix": 150000,
+  "marque": "Mới",
+  "qtestock": 10,
+  "imageart": "https://res.cloudinary.com/dgdxk31bg/image/upload/v1747137113/t%E1%BA%A3i%20xu%E1%BB%91ng.png.jpg",
+  "scategorieID": {
+    "$oid": "6823271187c14a18687e96d6"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68233e2da08de8920204c92f"
+  },
+  "reference": "002",
+  "designation": "Cải tạo tường - gạch - trần",
+  "prix": 1500000,
+  "marque": "Mới",
+  "qtestock": 10,
+  "imageart": "https://res.cloudinary.com/dgdxk31bg/image/upload/v1747137113/t%E1%BA%A3i%20xu%E1%BB%91ng.png.jpg",
+  "scategorieID": {
+    "$oid": "6823271187c14a18687e96d6"
+  },
+  "__v": 0
+}]
