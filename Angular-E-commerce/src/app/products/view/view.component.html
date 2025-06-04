@@ -1,0 +1,45 @@
+<!-- Nút mở modal -->
+<button class="btn btn-default" (click)="openModal()">
+    <i class="bi bi-info-square-fill"></i>
+</button>
+
+<!-- Hộp thoại (Modal) -->
+<div class="modal" tabindex="-1" role="dialog" [ngStyle]="{'display': display}">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            
+            <!-- Tiêu đề Modal -->
+            <div class="modal-header">
+                <h4 class="modal-title">Chi tiết sản phẩm</h4>
+                <button type="button" class="btn btn-default" aria-label="Đóng" (click)="closeModal()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <!-- Nội dung Modal -->
+            <div class="modal-body">
+                <template *ngTemplateOutlet="cardProduct"></template>
+            </div>
+
+            <!-- Chân Modal -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" (click)="closeModal()">Đóng</button>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<!-- Thẻ hiển thị sản phẩm -->
+<ng-template #cardProduct>
+    <div class="card" style="width: 18rem;">
+        <img [src]="products.imageart" class="card-img-top" alt="Ảnh sản phẩm">
+        <div class="card-body">
+            <p class="card-text">Mã tham chiếu: {{ products.reference }}</p>
+            <h5 class="card-title">{{ products.marque }}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">{{ products.prix }} VND</h6>
+            <p class="card-text">{{ products.designation }}</p>
+            <p class="card-text">Số lượng trong kho: {{ products.qtestock }}</p>
+        </div>
+    </div>
+</ng-template>

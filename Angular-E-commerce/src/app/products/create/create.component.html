@@ -1,0 +1,77 @@
+<!-- Nút mở modal -->
+<button type="button" class="btn btn-primary" (click)="openModal()">
+    <i class="bi bi-plus-circle-fill"></i>
+    Thêm mới sản phẩm
+</button>
+    
+<!-- Modal -->
+<div class="modal" tabindex="-1" role="dialog" [ngStyle]="{'display': display}">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Thêm sản phẩm</h4>
+        <button type="button" class="btn btn-default" aria-label="Close" (click)="closeModal()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <template *ngTemplateOutlet="formProduct"></template>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" (click)="closeModal()">Đóng</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Form -->
+<ng-template #formProduct>
+  <form (ngSubmit)="ajoutarticle()">
+    <div class="mb-3">
+      <input type="text" class="form-control" id="reference" name="reference" placeholder="Mã sản phẩm" [(ngModel)]="products.reference">
+    </div>
+
+    <div class="mb-3">
+      <input required minlength="4" #designation="ngModel"
+        type="text" class="form-control" id="designation" name="designation" placeholder="Tên sản phẩm *" [(ngModel)]="products.designation">
+    </div>
+
+    <div *ngIf="designation.invalid && (designation.dirty || designation.touched)" class="alert">
+      <div *ngIf="designation.errors?.['required']" [ngStyle]="{'color': 'red'}">
+        Vui lòng nhập tên sản phẩm
+      </div>
+      <div *ngIf="designation.errors?.['minlength']" [ngStyle]="{'color': 'red'}">
+        Tên sản phẩm phải có ít nhất 4 ký tự
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <input type="number" class="form-control" id="prix" name="prix" placeholder="Giá" [(ngModel)]="products.prix">
+    </div>
+
+    <div class="mb-3">
+      <input type="text" class="form-control" id="qtestock" name="qtestock" placeholder="Số lượng trong kho" [(ngModel)]="products.qtestock">
+    </div>
+
+    <div class="mb-3">
+      <input type="text" class="form-control" id="marque" name="marque" placeholder="Thương hiệu" [(ngModel)]="products.marque">
+    </div>
+
+    <div>
+      <file-pond #myPond [options]="pondOptions"></file-pond>
+    </div>
+
+    <div class="mb-3">
+      Danh mục con:
+      <select name="scategorieID" class="form-control" [(ngModel)]="products.scategorieID">
+        <option *ngFor="let sd of scategories" [value]="sd._id">
+          {{sd.nomscategorie}}
+        </option>
+      </select>
+    </div>
+
+    <div>
+      <button type="submit" class="btn btn-success">Lưu</button>
+    </div>
+  </form>
+</ng-template>

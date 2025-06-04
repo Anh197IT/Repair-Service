@@ -1,0 +1,20 @@
+<div class="card text-white bg-danger mb-3" style="max-width: 45rem;">
+  <div class="card-header text-center"><strong>Giỏ hàng</strong> </div>
+  <div class="card-body">
+      <h5 class="card-title">Tổng tiền: {{total}} </h5>
+      <hr>
+      <h6 class="card-title">Số lượng:</h6>
+
+      <ul>
+          <li *ngFor="let order of productAdded">
+              <div> <span>{{ order.product.designation }} </span></div>
+              <input type="number" min="0" max={{order.product.qtestock}} [(ngModel)]="order.quantity" (click) = "addTotal(order.product.prix,order.quantity)"/>
+          </li>
+      </ul>
+
+      <button class="btn btn-light btn-block" (click)="checkoutProduct()"
+      [disabled]="productAdded.length===0 ">Thanh toán
+ </button>
+
+  </div>
+</div>
